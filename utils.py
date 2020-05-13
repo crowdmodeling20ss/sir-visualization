@@ -45,7 +45,7 @@ def create_folder_data_scatter(folder):
     ID_REMOVED = 2
 
     group_counts = file_df_to_count_df(data, ID_INFECTED=ID_INFECTED, ID_SUSCEPTIBLE=ID_SUSCEPTIBLE)
-    group_counts.plot()
+    #group_counts.plot() TODO: this thows exception?
     scatter_s = go.Scatter(x=group_counts['simTime'],
                            y=group_counts['group-s'],
                            name='susceptible ' + os.path.basename(folder),
